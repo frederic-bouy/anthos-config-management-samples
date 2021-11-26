@@ -18,7 +18,7 @@ metadata:
   name: config-management
   namespace: config-management-system
 spec:
-  clusterName: my-cluster
+  clusterName: fred-cluster
   git:
     syncRepo: git@github.com:frederic-bouy/anthos-config-management-samples.git
     syncBranch: main
