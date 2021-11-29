@@ -1,0 +1,14 @@
+# This file is a Kustomoze overlay that points to the Kustomize base
+# This overlay includes a patch for the Helm chart base that adds the 
+# client.lifecycle.config.k8s.io/mutation: ignore
+# to all Deployment objects
+#The annotation causes Config Sync to ignore any conflicting changes to this object in the cluster after you have created it.
+
+
+resources:
+- base
+
+patches:
+- path: ignore-deployment-mutation-patch.yaml
+  target:
+    kind: Deployment

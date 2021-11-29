@@ -1,0 +1,5 @@
+helmCharts:
+- name: fred-nginx
+  repo: https://charts.bitnami.com/bitnami
+  releaseName: fred-nginx
+  namespace: hello 
